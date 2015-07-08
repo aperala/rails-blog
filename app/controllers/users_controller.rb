@@ -15,7 +15,8 @@ class UsersController < ApplicationController
     if params[:user][:password] == params[:password_confirmation]
       @user = User.create params[:user]
       flash[:alert] = "Your profile has been created"
-      redirect_to users_path
+      @user.save
+      redirect_to posts_path
     else
       flash[:alert] = "Your password and confirmation did not match."
       redirect_to users_path
