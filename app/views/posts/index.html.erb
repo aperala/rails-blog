@@ -1,0 +1,15 @@
+<h1>Latest Posts</h1>
+
+<section>
+  <% @posts.reverse.each do |post| %>
+    <article>
+      <h3>
+        <%= post.title %>
+      </h3>
+    
+      <%= post.text %>
+    </article>
+  <% end %>
+
+
+</section>
