@@ -18,10 +18,9 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       if @user.password == password
-        #success case
-        session[:user_id] = @user.user_id
-        redirect_to root_path
+        session[:user_id] = @user.id
         flash[:alert] = "Welcome!"
+        redirect_to root_path
       else
         #wrong password case
         flash[:alert] = "Your credentials don't match"
