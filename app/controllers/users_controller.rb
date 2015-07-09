@@ -18,6 +18,7 @@ class UsersController < ApplicationController
       @user = User.create user_params
       flash[:alert] = "Your profile has been created"
       @user.save
+      session[:user_id] = @user.id
       redirect_to posts_path
     else
       flash[:alert] = "Your password and confirmation did not match."
@@ -29,7 +30,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy
     flash[:alert] = "Your account has been deleted"
-    redirect_to users_path
+    session[:user_id] = nil
+    redirect_to root_path
   end
 
 
