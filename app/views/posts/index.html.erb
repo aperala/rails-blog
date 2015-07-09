@@ -7,7 +7,7 @@
         <%= link_to post.title, post_path(post) %>
       </h3>
       <h5>
-        <%= User.find(post.user_id).username %>
+        <%= post.user.username %>
       </h5>
       <%= post.text %>
       <p class="date">

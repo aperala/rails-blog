@@ -13,8 +13,26 @@
 
 <%= link_to "Delete Account", user_path(@user.id), method: :delete %>
 
+<h3>Add a new post:</h3>
+
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <section class="profile_page_posts">
-  <% @posts.each do |p| %>
+  <% @posts.order(id: :desc).each do |p| %>
     <article>
       <h3>
         <%= link_to p.title, post_path(p) %>

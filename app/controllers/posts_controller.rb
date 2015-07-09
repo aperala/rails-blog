@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order(id: :desc).limit(20)
+    @posts = Post.order(id: :desc).limit(40)
   end
 
   def show
@@ -10,22 +10,21 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-
   end
 
   def create
     if current_user
     @post = current_user.posts.create(post_params)
     @post.save
-    redirect_to user_path
+    redirect_to user_path(current_user)
     else
-      redirect_to user_path
+      redirect_to users_path
     end
   end
 
   private
   def post_params
-    params.require(:post).permit(:title, :text, :user_id)
+    params.require(:post).permit(:id, :title, :text, :user_id)
   end
 
 end

@@ -9,6 +9,8 @@
 <body>
 <header>
   <% if current_user %>
+    <%= link_to "Profile", user_path(current_user)  %>
+    <%= link_to "All Posts", posts_path %>
     <%= link_to "Sign Out", '/logout', method: :delete %>
     <% else %>
       <%= form_tag '/sessions' do %>
@@ -17,6 +19,7 @@
         <%= submit_tag "Log In" %>
       <% end %>
   <% end %>
+
 
   <% if flash[:alert] %>
     <div style="background:yellow;">
