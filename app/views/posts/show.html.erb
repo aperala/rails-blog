@@ -13,4 +13,16 @@
   </p>
 </article>
 
+<%= form_for Comment.new do |f| %>
+    <%= f.text_area :body %>
+    <%= f.hidden_field :post_id, value: @post.id %>
+    <%= f.submit :ok %>
+<% end %>
+
+<% @post.comments.each do |comment| %>
+  <p class="comment">
+    <%= comment.body %>
+  </p>
+<% end %>
+
 <%= link_to 'Return to all posts', posts_path %>
