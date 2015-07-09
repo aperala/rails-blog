@@ -1,0 +1,28 @@
+<article class = "profile">
+  <h3>
+    <%= @user.username %>
+  </h3>
+  <p>
+    <%= @user.city %>
+  </p>
+  <p>
+    Interests:
+    <%= @user.interests %>
+  </p>
+</article>
+
+<%= link_to "Delete Account", user_path(@user.id), method: :delete %>
+
+<section class="profile_page_posts">
+  <% @posts.each do |p| %>
+    <article>
+      <h3>
+        <%= link_to p.title, post_path(p) %>
+      </h3>
+      <%= p.text %>
+      <p class="date">
+        <%= p.created_at %>
+      </p>
+    </article>
+  <% end %>
+</section>

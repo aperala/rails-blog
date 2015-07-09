@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/users/new' => 'users#new'
   post '/users' => 'users#create'
   get '/posts/new' => 'posts#new'
+  get '/users/:id' => 'users#show'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

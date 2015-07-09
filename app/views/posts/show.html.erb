@@ -2,8 +2,15 @@
   <h2>
     <%= @post.title %>
   </h2>
-  
+  <h5>
+    by <%= @user.username %>
+  </h5>
   <p>
     <%= @post.text %>
   </p>
+  <p class="attribution">
+    <%= @post.created_at %>
+  </p>
 </article>
+
+<%= link_to 'Return to all posts', posts_path %>
