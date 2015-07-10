@@ -26,6 +26,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    if current_user == @user
+      @user = User.find(params[:id])
+      @user.update_attributes user_params
+      redirect_to user_path(@user)
+    else
+      flash[:alert] = "You do not have permission to edit this account"
+      redirect_to posts_path
+    end
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy

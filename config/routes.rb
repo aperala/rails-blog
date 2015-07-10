@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :comments
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -16,11 +16,13 @@ Rails.application.routes.draw do
 
   delete '/logout' => 'sessions#destroy'
 
-  get '/users/new' => 'users#new'
-  post '/users' => 'users#create'
-  get '/posts/new' => 'posts#new'
-  get '/users/:id' => 'users#show'
-  post '/users/:id' => 'users#show'
+  # get '/users/new' => 'users#new'
+  # post '/users' => 'users#create'
+  # get '/posts/new' => 'posts#new'
+  # get '/users/:id' => 'users#show'
+  # post '/users/:id' => 'users#show'
+  # get '/users/:id/edit' => 'users#edit'
+  # post '/users/:id' => 'users#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

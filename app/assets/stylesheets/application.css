@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+html, body, div, span, object, iframe,
+blockquote, del, dfn, em, img,small, strike, strong, 
+dl, dt, dd, ol, ul, li,form, label, legend,
+table, caption, tbody, tfoot, thead,
+article, canvas, details, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: SkyBlue;
+}
+
+#flash {
+  width: 200px;
+  background-color: yellow;
+}

@@ -22,6 +22,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
+
+
   private
   def post_params
     params.require(:post).permit(:id, :title, :text, :user_id)

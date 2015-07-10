@@ -11,27 +11,48 @@
   </p>
 </article>
 
-<%= link_to "Delete Account", user_path(@user.id), method: :delete %>
+<h4>Edit your profile</h4>
+
+  <div class="edit_form">
+    <%= form_for @user do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+      <br>
+      <%= f.label :city %>
+      <%= f.text_field :city %>
+      <br>
+      <%= f.label :interests %>
+      <%= f.text_field :interests %>
+      <br>
+      <%= f.submit :submit %>
+    <% end %>
+  </div>
+
+<h4>
+    <%= link_to "Delete Account", user_path(@user.id), method: :delete %>
+  </h4>
 
 <h3>Add a new post:</h3>
 
 <%= form_for @post do |f| %>
   <p>
-    <%= f.label :title %><br>
+    <%= f.label :title %>
+    <br>
     <%= f.text_field :title %>
   </p>
  
   <p>
-    <%= f.label :text %><br>
+    <%= f.label :text %>
+    <br>
     <%= f.text_area :text %>
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit :publish %>
   </p>
 <% end %>
 
-<section class="profile_page_posts">
+<section class="profile_posts">
   <% @posts.order(id: :desc).each do |p| %>
     <article>
       <h3>
