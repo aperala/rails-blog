@@ -1,3 +1,83 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a:link.feed_author, a:visited.feed_author {
+  color: #241200;
+  color: rgba(36,18,0, 0.7);
+}
+
+a:hover.feed_author {
+  color: #28A428;
+}
+
+.attribution {
+  font-size: 14px;
+}
+
+.comment_attribution {
+  text-align: right;
+  font-size: 12px;
+}
+
+.comments {
+  width: 60%;
+  margin: 0 auto;
+  padding: 1em;
+  line-height: 1.5em;
+  font-size: 14px;
+  background-color: Linen;
+  background-color: rgba(250,240,230, 0.4);
+  color: #3A2A19;
+}
+
+.date_and_comments {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 10px;
+}
+
+.go_back {
+  margin-left: 10px;
+}
+
+.post {
+  width: 60%;
+  margin: 40px auto;
+  font-size: 18px;
+}
+
+.posts_feed {
+  width: 20%;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: .5em .7em;
+  overflow: auto;
+  background-color: Linen;
+  background-color: rgba(250,240,230, 0.4);
+}
+
+.posts_feed a {
+  margin-bottom: 1em;
+}
+
+.posts_feed a:link, .posts_feed a:visited {
+  color: #28A428;
+}
+
+.posts_feed a:hover {
+  color: #a42828;
+}
+
+.comment_body {
+  width: 60%;
+}
+
+#comment_form {
+  width: 300px;
+  height: 50px;
+}

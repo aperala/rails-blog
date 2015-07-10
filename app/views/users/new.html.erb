@@ -1,16 +1,24 @@
+<div id = "new_user_pg">
 
-<h2>Create your account</h2>
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username, {placeholder: 'Username', required: true} %>
-  <%= f.label :password %>
-  <%= f.password_field :password, {placeholder: 'Enter a password', required: true} %>
-  <%= label_tag :confirm_password %>
-  <%= password_field_tag :password_confirmation, nil, {placeholder: 'Confirm your password', required: true} %>
-  <%= f.label :city %>
-  <%= f.text_field :city, {placeholder: 'City', required: true} %>
-  <%= f.label :interests %>
-  <%= f.text_field :interests, {placeholder: 'e.g., history, music', required: true} %>
-  <%= f.submit "Sign Up" %>
-<% end %>
-  
+  <div id="sign_up_form">
+    <h2 class="page_headline">Create your account</h2>
+    <%= form_for @user do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username, {placeholder: 'Username', required: true} %>
+      <br>
+      <%= f.label :password %>
+      <%= f.password_field :password, {placeholder: 'Enter a password', required: true} %>
+      <br>
+      <%= label_tag :confirm_password %>
+      <%= password_field_tag :password_confirmation, nil, {placeholder: 'Confirm your password', required: true} %>
+      <br>
+      <%= f.label :city %>
+      <%= f.text_field :city, {placeholder: 'City', required: true} %>
+      <br>
+      <%= f.label :interests %>
+      <%= f.text_field :interests, {placeholder: 'e.g., history, music', required: true} %>
+      <br>
+      <%= f.submit "Sign Up", class: 'button' %>
+  </div>
+  <% end %>
+ </div> 

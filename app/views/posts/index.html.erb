@@ -1,20 +1,21 @@
-<h1>Latest Thoughts</h1>
-
 <section>
+  <h1 class="page_headline">Latest Rants</h1>
+  <hr>
   <% @posts.each do |post| %>
-    <article>
-      <h3>
+    <article class="posts_feed">
+      <h3 id="feed_head">
         <%= link_to post.title, post_path(post) %>
       </h3>
       <h5>
-        <%= link_to post.user.username, user_path(post.user) %>
+        <%= link_to post.user.username, user_path(post.user), class: "feed_author" %>
       </h5>
-      <%= post.text %>
-      <p class="date">
-        <%= post.created_at %>
-      </p>
+      <br>
+      <%= truncate post.text, length: 150 %>
+      <div class="date_and_comments">
+        <%= post.created_at.to_s(:short) %>
+        <br>
+        Comments: <%= post.comments.count %>
+      </div>
     </article>
   <% end %>
-
-
 </section>

@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>RailsBlog</title>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,9 +16,9 @@
       <%= link_to "Sign Out", '/logout', method: :delete %>
       <% else %>
         <%= form_tag '/sessions' do %>
-          <%= text_field_tag :username, nil, placeholder: "Username" %>
-          <%= password_field_tag :password, nil, placeholder: "Password" %>
-          <%= submit_tag "Enter" %>
+          <%= text_field_tag :username, nil, placeholder: "Username", class: "input" %>
+          <%= password_field_tag :password, nil, placeholder: "Password", class: "input" %>
+          <%= submit_tag "Enter", class: "button" %>
         <% end %>
     <% end %>
   </nav>
@@ -31,5 +32,8 @@
 
 <%= yield %>
 
+  <footer>
+    &#169; The Break Room, 2015
+  </footer>
 </body>
 </html>
