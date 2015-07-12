@@ -1,67 +1,84 @@
-<article class = "profile">
-  <h3>
-    <%= @user.username %>
-  </h3>
-  <p>
-    <%= @user.city %>
-  </p>
-  <p>
-    Interests:
-    <%= @user.interests %>
-  </p>
-</article>
+<div class = "left">
+  <article class = "profile">
+    <h3>
+      <%= @user.username %>
+    </h3>
+    <p>
+      <%= @user.city %>
+    </p>
+    <p>
+      Interests:
+      <%= @user.interests %>
+    </p>
+     <p>
+      Occupation:
+      <%= @user.occupation %>
+    </p>
+  </article>
 
-<h4>Edit your profile</h4>
-
-  <div class="edit_form">
-    <%= form_for @user do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
+  <button id="moo">Edit your profile</button>
+    <div id="edit_form">
+      <%= form_for @user do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %>
+        <br>
+        <%= f.label :city %>
+        <%= f.text_field :city %>
+        <br>
+        <%= f.label :interests %>
+        <%= f.text_field :interests %>
+        <br>
+        <%= f.label :occupation %>
+        <%= f.text_field :occupation %>
+        <br>
+        <%= f.submit :submit %>
+        <br>
+      <% end %>
       <br>
-      <%= f.label :city %>
-      <%= f.text_field :city %>
-      <br>
-      <%= f.label :interests %>
-      <%= f.text_field :interests %>
-      <br>
-      <%= f.submit :submit, class: "button" %>
-    <% end %>
-  </div>
-
-<h4>
-    <%= link_to "Delete Account", user_path(@user.id), method: :delete %>
-  </h4>
-
-<h3>Add a new post:</h3>
-
-<%= form_for @post do |f| %>
-  <p>
-    <%= f.label :title %>
-    <br>
-    <%= f.text_field :title %>
-  </p>
+      <h4>
+        <%= link_to "Delete Account", user_path(@user.id), method: :delete %>
+      </h4> 
+    </div>
  
-  <p>
-    <%= f.label :text %>
-    <br>
-    <%= f.text_area :text %>
-  </p>
- 
-  <p>
-    <%= f.submit :publish %>
-  </p>
-<% end %>
 
-<section class="profile_posts">
-  <% @posts.order(id: :desc).each do |p| %>
-    <article>
-      <h3>
-        <%= link_to p.title, post_path(p) %>
-      </h3>
-      <%= p.text %>
-      <p class="date">
-        <%= p.created_at %>
-      </p>
-    </article>
+</div>
+
+<div class="right">
+  <h2>Add a new post:</h2>
+
+  <%= form_for @post do |f| %>
+    <p>
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </p>
+   
+    <p>
+      <%= f.label :text %>
+      <br>
+      <%= f.text_area :text %>
+    </p>
+   
+    <p>
+      <%= f.submit :publish, class: "button" %>
+    </p>
   <% end %>
-</section>
+
+  <hr>
+
+  <h2>My posts:</h2>
+  <br>
+  <section class="profile_posts">
+    <% @posts.order(id: :desc).each do |p| %>
+      <article>
+        <h3>
+          <%= link_to p.title, post_path(p) %>
+        </h3>
+        <%= p.text %>
+        <p class="date">
+          <%= p.created_at.to_s(:long) %>
+        </p>
+      </article>
+    <% end %>
+  </section>
+</div>

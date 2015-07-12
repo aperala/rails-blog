@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('#moo').click(function(){
+    clickHandler();
+  });
+  $('#edit_form').hide(0);
+});
+
+function clickHandler(){
+      $('#edit_form').show(1000);
+    }

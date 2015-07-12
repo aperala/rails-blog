@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
     else
       if @user.password == password
         session[:user_id] = @user.id
-        flash[:alert] = "Welcome!"
         redirect_to posts_path
       else
         #wrong password case

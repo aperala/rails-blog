@@ -31,13 +31,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    if current_user == @user
-      @user = User.find(params[:id])
-      @user.update_attributes user_params
-      redirect_to user_path(@user)
+    @user = User.find(params[:id])
+    if @user == current_user
+    @user.update_attributes user_params
+    redirect_to user_path(@user)
     else
       flash[:alert] = "You do not have permission to edit this account"
-      redirect_to posts_path
+    redirect_to posts_path
     end
   end
 
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:id, :username, :password, :password_confirmation, :city, :interests)
+    params.require(:user).permit(:id, :username, :password, :password_confirmation, :city, :interests, :occupation)
   end
  
 end
