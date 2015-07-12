@@ -37,5 +37,12 @@
   <% end %>
 </div>
 
-<%= link_to 'Return to all posts', posts_path, class: "go_back" %>
-
+<div class="post_links">
+  <% if @previous %>
+    <%= link_to '< Previous', @previous %>
+  <% end %>
+  <%= link_to 'Return to all posts', posts_path %>
+  <% if @next %>
+    <%= link_to 'Next >', @next  %>
+  <% end %>
+</div>

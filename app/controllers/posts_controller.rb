@@ -4,8 +4,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @user = User.find(@post.user_id)
+    @post = Post.find(params[:id])   
+    @previous = Post.where("id < ?", params[:id]).order(:created_at).last   
+    @next = Post.where("id > ?", params[:id]).order(:created_at).first 
   end
 
   def new

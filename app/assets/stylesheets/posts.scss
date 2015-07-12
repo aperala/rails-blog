@@ -1,6 +1,6 @@
-// Place all the styles related to the posts controller here.
+/*// Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/ */
 
 a:link.feed_author, a:visited.feed_author {
   color: #241200;
@@ -20,8 +20,12 @@ a:hover.feed_author {
   font-size: 12px;
 }
 
-.comments {
+.comment_body {
   width: 60%;
+}
+
+.comments {
+  width: 50%;
   margin: 0 auto;
   padding: 1em;
   line-height: 1.5em;
@@ -38,14 +42,21 @@ a:hover.feed_author {
   font-size: 10px;
 }
 
-.go_back {
-  margin-left: 10px;
-}
-
 .post {
   width: 60%;
   margin: 40px auto;
   font-size: 18px;
+}
+
+.post_links {
+  width: 50%;
+  margin: 16px auto;
+  text-align: center;
+}
+
+.post_links > a {
+  margin-right: 18%;
+  text-align: center;
 }
 
 .posts_feed {
@@ -71,10 +82,6 @@ a:hover.feed_author {
 
 .posts_feed a:hover {
   color: #a42828;
-}
-
-.comment_body {
-  width: 60%;
 }
 
 #comment_form {

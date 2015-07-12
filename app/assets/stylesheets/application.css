@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-html, body, div, footer, h1, h2, h3, h4, h5, h6, span, object, iframe,
+html, body, div, footer, h1, h3, h4, h5, h6, span, object, iframe,
 blockquote, del, dfn, em, img,small, strike, strong, 
 dl, dt, dd, ol, ul, li,form, label, legend,
 table, caption, tbody, tfoot, thead,
@@ -93,7 +93,7 @@ section {
 
 textarea:focus, input:focus {
   outline-size: 2px;
-  outline-color: LimeGreen;
+  outline-color: Green;
 }
 
 .button {
@@ -115,7 +115,7 @@ textarea:focus, input:focus {
   color: #a42828;
 }
 
-#flash {
+flash {
   width: 200px;
   background-color: LimeGreen;
   color: white;
