@@ -71,8 +71,7 @@ label {
 nav {
   height: 30px;
   padding: .7em;
-  background-color: brown;
-  background-color: rgba(36,18,0, 0.7);
+  background-color: #401505;
 }
 
 nav > a:link, nav > a:visited {
