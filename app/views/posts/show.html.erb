@@ -26,7 +26,7 @@
       <%= comment.body %>
     </p>
     <p class="comment_attribution">
-      Posted by <%= comment.user.username %>
+      Posted by <%= link_to comment.user.username, user_path(comment.user.id) %>
       <br>
       at <%= comment.created_at.to_s(:short) %></span>
     </p>

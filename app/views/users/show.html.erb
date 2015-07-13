@@ -1,5 +1,6 @@
 <div class = "left">
   <article class = "profile">
+    <%= image_tag @user.avatar.url(:medium) %>
     <h3>
       <%= @user.username %>
     </h3>
@@ -15,7 +16,7 @@
       <%= @user.occupation %>
     </p>
   </article>
-
+  <br>
   <button id="moo">Edit your profile</button>
     <div id="edit_form">
       <%= form_for @user do |f| %>

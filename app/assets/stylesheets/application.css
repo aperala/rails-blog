@@ -60,6 +60,8 @@ h2 {
 }
 
 input[type="text"]{
+  width: 300px;
+  height: 24px;
   margin-bottom:10px;
 }
 
@@ -88,6 +90,12 @@ section {
   width: 80%;
   margin: auto;
   overflow: auto;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  overflow: scroll;
 }
 
 textarea:focus, input:focus {
