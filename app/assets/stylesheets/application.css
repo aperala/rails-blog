@@ -130,9 +130,11 @@ textarea:focus, input:focus {
   color: #D05021;
 }
 
-flash {
-  width: 200px;
-  background-color: #DDA914;
+#flash {
+  width: 300px;
+  margin-left: 10px;
+  background-color: red;
+  color: white;
 }
 
 #front_pg_title {

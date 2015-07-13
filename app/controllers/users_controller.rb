@@ -17,16 +17,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    if params[:user][:password] == params[:password_confirmation]
-      @user = User.create user_params
-      flash[:alert] = "Your profile has been created"
-      @user.save
-      session[:user_id] = @user.id
-      redirect_to posts_path
-    else
-      flash[:alert] = "Your password and confirmation did not match."
-      redirect_to users_path
-    end
+    @user = User.new(user_params)
+      if @user.save
+        session[:user_id] = @user.id
+        flash[:alert] = "Your profile has been created"
+        redirect_to posts_path
+      else
+        flash[:alert] = "Something went wrong. Please check error message:"
+        render :new
+      end
   end
 
   def edit

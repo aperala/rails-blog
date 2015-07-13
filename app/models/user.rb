@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
-  validates :username, uniqueness: true
+  validates_presence_of :username, :password
 
+  validates :username, { uniqueness: {message: "That username is taken. Please enter another."}}
+
+  validates :password, {confirmation: true}
+  
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 
