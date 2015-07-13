@@ -19,7 +19,7 @@
   <br>
   <button id="moo">Edit your profile</button>
     <div id="edit_form">
-      <%= form_for @user do |f| %>
+      <%= form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
         <br>
@@ -32,6 +32,9 @@
         <%= f.label :occupation %>
         <%= f.text_field :occupation %>
         <br>
+        <%= f.label :Choose_a_photo %>
+        <%= f.file_field :avatar %>
+        <br> 
         <%= f.submit :submit %>
         <br>
       <% end %>
@@ -46,6 +49,9 @@
 
 <div class="right">
   <h2>Add a new post:</h2>
+  <p>
+    <%= link_to 'Go to full post editor', new_post_path %>
+  </p>
 
   <%= form_for @post do |f| %>
     <p>
@@ -64,12 +70,10 @@
       <%= f.submit :publish, class: "button" %>
     </p>
   <% end %>
+  
 
-  <hr>
-
-  <h2>My posts:</h2>
-  <br>
   <section class="profile_posts">
+    <h2>My posts:</h2>
     <% @posts.order(id: :desc).each do |p| %>
       <article>
         <h3>

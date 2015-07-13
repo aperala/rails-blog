@@ -5,7 +5,11 @@
   <% @posts.each do |post| %>
     <article class="posts_feed">
       <h3 id="feed_head">
-        <%= link_to post.title, post_path(post) %>
+      <% if post.avatar? %>
+      <%= image_tag post.avatar.url(:thumb) %>      
+      <% end %>
+      <br>
+      <%= link_to post.title, post_path(post) %>
       </h3>
       <h5>
         <%= link_to post.user.username, user_path(post.user), class: "feed_author" %>

@@ -1,6 +1,6 @@
 <div id = "new_user_pg">
 
-  <div id="sign_up_form">
+  <div class="main">
     <h2 class="page_headline">Create your account</h2>
      <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
       <%= f.label :username %>
@@ -21,7 +21,7 @@
       <%= f.label :occupation %>
       <%= f.text_field :occupation, {placeholder: 'Occupation', required: true} %>
       <br>
-      Upload a photo:
+      <%= f.label :Choose_a_photo %>
       <%= f.file_field :avatar %> 
       <br>
       <%= f.submit "Sign Up", class: 'button' %>

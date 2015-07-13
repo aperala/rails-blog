@@ -2,6 +2,7 @@
   <h2 class="page_headline">
     <%= @post.title %>
   </h2>
+  <%= image_tag @post.avatar.url(:medium) %>
   <p>
     <%= @post.text %>
   </p>

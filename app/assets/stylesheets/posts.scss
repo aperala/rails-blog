@@ -28,15 +28,26 @@
 
 .date_and_comments {
   position: absolute;
-  left: 3px;
-  bottom: 3px;
-  font-size: 10px;
+  left: 4px;
+  bottom: 4px;
+  font-size: 12px;
+  color: #FFF;
+}
+
+.new_post {
+  width: 60%;
+  height: 200px;
 }
 
 .post {
-  width: 60%;
+  width: 50%;
   margin: 40px auto;
   font-size: 18px;
+}
+
+.post_title {
+  width: 60%;
+  height: 20px;
 }
 
 .post_links {
