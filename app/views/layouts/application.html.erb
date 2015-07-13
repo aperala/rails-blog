@@ -13,6 +13,7 @@
   <nav>
     <% if current_user %>
       <%= link_to "Home", user_path(current_user) %>
+      <%= link_to "New Post", new_post_path  %>
       <%= link_to "All Posts", posts_path %>
       <%= link_to "Sign Out", '/logout', method: :delete %>
       <span id="logged_in">Logged in as: <%= current_user.username %> </span>

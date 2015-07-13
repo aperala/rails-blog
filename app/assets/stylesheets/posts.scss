@@ -11,6 +11,14 @@
   font-size: 12px;
 }
 
+.comment_attribution a:link, .comment_attribution a:visited {
+  color: white;
+}
+
+.comment_attribution a:hover {
+  color: #D05021;
+}
+
 .comment_body {
   width: 60%;
 }
@@ -21,9 +29,9 @@
   padding: 1em;
   line-height: 1.5em;
   font-size: 14px;
-  background-color: Linen;
-  background-color: rgba(250,240,230, 0.4);
-  color: #3A2A19;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
 }
 
 .date_and_comments {
