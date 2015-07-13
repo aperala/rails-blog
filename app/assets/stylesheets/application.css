@@ -143,8 +143,8 @@ flash {
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
-  background-color: DodgerBlue;
-  background-color: rgba(11,129,213, 0.7);
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
   color: white;
 }
 

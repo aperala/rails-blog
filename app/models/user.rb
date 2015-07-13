@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  validates :username, uniqueness: true
+
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
 

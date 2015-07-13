@@ -1,16 +1,19 @@
 class UsersController < ApplicationController
   def index 
     @users = User.all
+    @title = "The Break Room"
   end
 
   def show
     @post = Post.new
     @user = User.find params[:id]
     @posts = Post.where("user_id = ?", @user[:id])
+    @title = "Profile: " + @user.username
   end
 
   def new
     @user = User.new
+    @title = "Sign Up"
   end
 
   def create

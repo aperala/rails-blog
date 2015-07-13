@@ -1,16 +1,19 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.order(id: :desc).limit(40)
+    @title = "The Break Room - Latest Posts"
   end
 
   def show
     @post = Post.find(params[:id])   
     @previous = Post.where("id < ?", params[:id]).order(:created_at).last   
     @next = Post.where("id > ?", params[:id]).order(:created_at).first 
+    @title = @post.title
   end
 
   def new
     @post = Post.new
+    @title = "Create new post"
   end
 
   def create
