@@ -1,6 +1,11 @@
 /*// Place all the styles related to the Users controller here.
 /*//*/ They will automatically be included in application/*.css.*/
 /*// You can use Sass (SCSS) here: http://sass-lang.com/*/
+.right textarea {
+  width: 300px;
+  height: 100px;
+  overflow: scroll;
+}
 
 .edit_form > form {
   margin-top: 5px;
@@ -29,8 +34,8 @@
 
 .profile {
   padding: 1em;
-  background-color: green;
-  background-color: rgba(40,162,72, 0.8);
+  background-color: DodgerBlue;
+  background-color: rgba(11, 129, 213, 0.6);
   color: white;
 }
 

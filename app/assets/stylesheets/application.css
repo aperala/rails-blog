@@ -28,12 +28,12 @@ time, mark, audio, video {
 
 a:link, a:visited {
   text-decoration: none;
-  color: #28A248;
+  color: #0B81D5;
 }
 
 a:hover {
   font-weight: bold;
-  color: #a42828;
+  color: #D05021;
 }
 
 body {
@@ -56,12 +56,10 @@ header {
 }
 
 h2 {
-  color: #a42828;
+  color: #D05021;
 }
 
 input[type="text"]{
-  width: 300px;
-  height: 24px;
   margin-bottom:10px;
 }
 
@@ -83,7 +81,7 @@ nav > a:link, nav > a:visited {
 }
 
 nav > a:hover {
-  color: #28A248;
+  color: #D05021;
 }
 
 section {
@@ -92,22 +90,16 @@ section {
   overflow: auto;
 }
 
-textarea {
-  width: 300px;
-  height: 100px;
-  overflow: scroll;
-}
-
 textarea:focus, input:focus {
   outline-size: 2px;
-  outline-color: Green;
+  outline-color: #0B81D5;
 }
 
 .button {
   border-radius: 5px;
   border: none;
   font-size: 16px;
-  background-color: #28A248;
+  background-color: #0B81D5;
   color: white;
 }
 
@@ -119,13 +111,12 @@ textarea:focus, input:focus {
   margin-top: 1em;
   text-align: center;
   font-size: 36px;
-  color: #a42828;
+  color: #D05021;
 }
 
 flash {
   width: 200px;
-  background-color: LimeGreen;
-  color: white;
+  background-color: #DDA914;
 }
 
 #front_pg_title {
@@ -136,8 +127,8 @@ flash {
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
-  background-color: green;
-  background-color: rgba(40,162,72, 0.8);
+  background-color: DodgerBlue;
+  background-color: rgba(11,129,213, 0.7);
   color: white;
 }
 
@@ -155,8 +146,10 @@ flash {
   height: 600px;
   display: block;
   background-color: white;
-  background: url(coffee_clock.jpg) no-repeat;
+  background: url(coffee_clock.jpg), url(paper.png);
+  background-position: left center, left top;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #logged_in {
@@ -171,8 +164,8 @@ flash {
   width: 100%;
   height: 600px;
   margin: 0;
-  background: url(rubber_bands.jpg) no-repeat;
-  background-size: cover;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
 }
 
 #sign_up_form {

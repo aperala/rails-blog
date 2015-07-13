@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/ */
 
-a:link.feed_author, a:visited.feed_author {
-  color: #241200;
-  color: rgba(36,18,0, 0.7);
-}
-
-a:hover.feed_author {
-  color: #28A428;
-}
-
 .attribution {
   font-size: 14px;
 }
@@ -37,8 +28,8 @@ a:hover.feed_author {
 
 .date_and_comments {
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 3px;
+  bottom: 3px;
   font-size: 10px;
 }
 
@@ -68,8 +59,8 @@ a:hover.feed_author {
   margin-bottom: 20px;
   padding: .5em .7em;
   overflow: auto;
-  background-color: Linen;
-  background-color: rgba(250,240,230, 0.4);
+  background-color: DodgerBlue;
+  background-color: rgba(11, 129, 213, 0.6);
 }
 
 .posts_feed a {
@@ -77,11 +68,11 @@ a:hover.feed_author {
 }
 
 .posts_feed a:link, .posts_feed a:visited {
-  color: #28A428;
+  color: white;
 }
 
 .posts_feed a:hover {
-  color: #a42828;
+  color: #D05021;
 }
 
 #comment_form {
