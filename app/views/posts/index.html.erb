@@ -15,7 +15,7 @@
         <%= link_to post.user.username, user_path(post.user), class: "feed_author" %>
       </h5>
       <br>
-      <%= truncate post.text, length: 150 %>
+      <%= truncate post.text, length: 140 %>
       <div class="date_and_comments">
         <%= post.created_at.to_s(:short) %>
         <br>

@@ -8,22 +8,24 @@
 }
 
 .edit_form > form {
-  line-height: 2.5em;
+  width: 100%;
+  line-height: 2em;
 }
 
 .date {
   font-size: 12px;
 }
 
-.edit_form {
-  width: 70%;
-  display: inline-block;
+div.edit_form {
+  width: 90%;
+  height: 500px;
+  display: none;
   text-align: left;
 }
 
 .left {
   width: 25%;
-  height: 500px;
+  height: 700px;
   display: inline-block;
   vertical-align: top;
   margin: 20px 15% 20px 20px;

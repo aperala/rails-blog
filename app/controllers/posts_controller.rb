@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.order(id: :desc).limit(40)
-    @title = "The Break Room - Latest Posts"
+    @title = "The Staff Room - Latest Posts"
   end
 
   def show

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title %></title>
-  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <%= csrf_meta_tags %>
+  <title>
+    <%= @title %>
+  </title>
 </head>
 <body>
 <header>
@@ -36,7 +38,7 @@
 <%= yield %>
 
   <footer>
-    &#169; The Break Room, 2015
+    &#169; The Staff Room, 2015
   </footer>
 </body>
 </html>

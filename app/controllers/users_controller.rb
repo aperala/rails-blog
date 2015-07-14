@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index 
     @users = User.all
-    @title = "The Break Room"
+    @title = "The Staff Room"
   end
 
   def show

@@ -17,8 +17,8 @@
     </p>
   </article>
   <br>
-  <button id="moo">Edit your profile</button>
-    <div id="edit_form">
+  <button id="moo">Edit Profile</button>
+    <div class="edit_form">
       <%= form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
@@ -48,7 +48,7 @@
 </div>
 
 <div class="right">
-  <h2>Add a new post:</h2>
+  <h2>Quick add a new post:</h2>
   <p>
     <%= link_to 'Go to full post editor', new_post_path %>
   </p>

@@ -12,16 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-  $('#moo').click(function(){
-    clickHandler();
+$(document).ready(function() {
+  $("#moo").click(function(){
+    event.preventDefault();
+    $(".edit_form").toggle();
   });
-  $('#edit_form').hide(0);
 });
-
-function clickHandler(){
-      $('#edit_form').show(1000);
-    }
