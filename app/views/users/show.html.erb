@@ -16,10 +16,12 @@
       <%= @user.occupation %>
     </p>
   </article>
+
   <br>
+
   <button id="moo">Edit Profile</button>
     <div class="edit_form">
-      <%= form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
+      <%= form_for @user, url: user_path, html: { multipart: true } do |f| %>
         <%= f.label :username %>
         <%= f.text_field :username %>
         <br>
@@ -43,8 +45,6 @@
         <%= link_to "Delete Account", user_path(@user.id), method: :delete %>
       </h4> 
     </div>
- 
-
 </div>
 
 <div class="right">
@@ -77,9 +77,9 @@
     <% @posts.order(id: :desc).each do |p| %>
       <article>
         <h3>
-          <%= link_to p.title, post_path(p) %>
+          <%= link_to p.title.titleize, post_path(p) %>
         </h3>
-        <%= p.text %>
+        <%= simple_format h(p.text) %>
         <p class="date">
           <%= p.created_at.to_s(:long) %>
         </p>

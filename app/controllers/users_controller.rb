@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @title = "The Staff Room"
   end
 
+  # show page is 'profile' page, includes user's own posts and short form to create
+  # new post. Set instance variables for all three.
   def show
     @post = Post.new
     @user = User.find params[:id]
@@ -16,6 +18,8 @@ class UsersController < ApplicationController
     @title = "Sign Up"
   end
 
+  # new user sign-up page, log in after successful sign up (validations in model)
+  # else give flash alert and render AR error message
   def create
     @user = User.new(user_params)
       if @user.save
@@ -28,10 +32,12 @@ class UsersController < ApplicationController
       end
   end
 
+  # edit form on show page (user profile)
   def edit
     @user = User.find params[:id]
   end
 
+  # allow update of user profile only if current user matches user id
   def update
     @user = User.find(params[:id])
     if @user == current_user
@@ -43,15 +49,18 @@ class UsersController < ApplicationController
     end
   end
 
+  # destroy user - delete account (will also delete assoc. posts and comments)
+  # clear session and redirect to root
   def destroy
     @user = User.find(params[:id])
     @user.destroy
     flash[:alert] = "Your account has been deleted"
-    session[:user_id] = nil
+    session.clear
     redirect_to root_path
   end
 
 
+  # strong params for user
   private
 
   def user_params

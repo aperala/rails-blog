@@ -1,21 +1,26 @@
 /*// Place all the styles related to the Users controller here.
 /*//*/ They will automatically be included in application/*.css.*/
 /*// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+/* form for new post on user profile page */
 .right textarea {
   width: 300px;
   height: 100px;
   overflow: scroll;
 }
 
+/* user profile edit form */
 .edit_form > form {
   width: 100%;
   line-height: 2em;
 }
 
+/* style for created at on user profile pg */
 .date {
   font-size: 12px;
 }
 
+/* container for profile edit form */
 div.edit_form {
   width: 90%;
   height: 500px;
@@ -23,15 +28,17 @@ div.edit_form {
   text-align: left;
 }
 
+/* user profile container */
 .left {
   width: 25%;
-  height: 700px;
+  height: 740px;
   display: inline-block;
   vertical-align: top;
   margin: 20px 15% 20px 20px;
   text-align: left;
 }
 
+/* user profile */
 .profile {
   padding: 1em;
   background-color: #1292e8;
@@ -43,12 +50,14 @@ div.edit_form {
   margin: 30px 0;
 }
 
+/* container for page content right side, user show path (profile page) */
 .right {
   width: 50%;
   display: inline-block;
   margin-top: 20px;
 }
 
+/* button to toggle user profile edit form */
 #moo {
   margin-bottom: 20px;
   background-color: white;

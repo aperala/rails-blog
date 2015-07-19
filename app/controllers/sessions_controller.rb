@@ -1,10 +1,13 @@
 class SessionsController < ApplicationController
-
+ 
+ # clear session after user logout and redirect to root
   def destroy
-    session[:user_id] = nil
+    session.clear
     redirect_to root_path
   end
 
+  # initiate session: find user by username, then match password
+  # set session user id to @user to log in after validation
   def create
     username = params[:username]
     password = params[:password]

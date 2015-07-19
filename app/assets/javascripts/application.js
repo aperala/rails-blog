@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
+// toggles user profile edit/delete form open on button click
+
 $(document).ready(function() {
   $("#moo").click(function(){
     event.preventDefault();
