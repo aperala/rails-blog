@@ -78,8 +78,9 @@
   margin-bottom: 20px;
   padding: .5em .7em;
   overflow: auto;
-  background-color: DodgerBlue;
-  background-color: rgba(11, 129, 213, 0.6);
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
 }
 
 .posts_feed a {
@@ -92,6 +93,12 @@
 
 .posts_feed a:hover {
   color: #D05021;
+}
+
+#post_image {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
 }
 
 #comment_form {
