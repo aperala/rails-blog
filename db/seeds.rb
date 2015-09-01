@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Comment.create!([
+  {body: "Cool story, bro.", user_id: 23, post_id: 39},
+  {body: "You, sir, would make a terrible sailor.", user_id: 20, post_id: 38},
+  {body: "I think I understand where you are coming from, my friend. My employer is also obsessed with hunting down one particular giant. ", user_id: 20, post_id: 39},
+  {body: "Is this Hidalgo you speak of very tempestuous and brooding, with a darkly sadistic streak and a domineering manner? If so, could I arrange to meet him?", user_id: 22, post_id: 39},
+  {body: "I find that I am often attracted to co-workers. I mean employers. Or sometimes my cousin. Never mind.", user_id: 22, post_id: 40},
+  {body: "You need to get out once in a while.", user_id: 23, post_id: 41},
+  {body: "Dear plainjane, \r\nThis is Alice from HR. Please come to my office ASAP.", user_id: 24, post_id: 41}
+])
+Post.create!([
+  {title: "Why won't my boss leave me alone?", text: "My boss keeps asking me to do things that I don't want to do. Even though I tell him this, he continues to ask me to do more things that I don't want to do.\r\n\r\nHas anyone else had this problem? ", user_id: 23, avatar_file_name: "wall_street.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 80903, avatar_updated_at: "2015-07-14 03:16:17"},
+  {title: "El Hidalgo My Boss", text: "Hello everyone. \r\n\r\nThe reason why for I am writing is El Hidalgo Don Quixote sometimes he thinks a windmill is a giant and I say no it is a windmill and then he says no, look at his arms, and I say, okay a giant because after all he is the boss but I really think this is not so good to have a boss who thinks windmills are giants and then he wants to fight them I am wondering if this really is such a good situation for me or maybe I should update my resume because I am not sure if in the long term this will be beneficial position but I try to help with my wisdoms when I can.\r\n\r\nAlso, sometimes a donkey is not comfortable to sit on.\r\n\r\nThank you.", user_id: 21, avatar_file_name: "el-quijote-y-sancho-panza.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 22959, avatar_updated_at: "2015-07-14 03:32:11"},
+  {title: "About My Captain", text: "All that most maddens and torments; all that stirs up the lees of things; all truth with malice in it; all that cracks the sinews and cakes the brain; all the subtle demonisms of life and thought; all evil, to crazy Ahab, were visibly personified, and made practically assailable in Moby Dick. He piled upon the whale’s white hump the sum of all the general rage and hate felt by his whole race from Adam down; and then, as if his chest had been a mortar, he burst his hot heart’s shell upon it.\r\n\r\nOT, but is it normal to feel attracted to a co-worker? (asking for a friend.)", user_id: 20, avatar_file_name: "ahab.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 29651, avatar_updated_at: "2015-07-14 03:40:48"},
+  {title: "A Mighty Oak", text: "I was actually permitting myself to experience a sickening sense of disappointment: but rallying my wits, and recollecting my principles, I at once called my sensations to order; and it was wonderful how I got over the temporary blunder--how I cleared up the mistake of supposing Mr. Rochester's movements a matter in which I had any cause to take vital interest. Not that I humbled myself by a slavish notion of inferiority: on the contrary, I just said--\r\n\r\n\r\nYou have nothing to do with the master of Thornfield further than to receive the salary he gives you for teaching his protegee and to be grateful for such respectful and kind treatment as, if you do your duty, you have a right to expect at his hands. Be sure that is the only tie he seriously acknowledges between you and him, so don't make him the object of your fine feelings, your raptures, agonies, and so forth. He is not of your order: keep to your caste; and be too self-respecting to lavish the love of the whole heart, soul, and strength, where such a gift is not wanted and would be despised.", user_id: 22, avatar_file_name: "eyre.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 51768, avatar_updated_at: "2015-07-14 03:47:43"}
+])
+User.create!([
+  {username: "ishmael", password: "moby", city: "Nantucket", interests: "sailing, whale lore, melancholy", occupation: "sailor", avatar_file_name: "ishmael.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 38342, avatar_updated_at: "2015-07-14 00:20:15"},
+  {username: "sancho", password: "burro", city: "La Mancha", interests: "sanchismos, burros, insulas", occupation: "squire", avatar_file_name: "sancho_panza.jpeg", avatar_content_type: "image/jpeg", avatar_file_size: 51360, avatar_updated_at: "2015-07-14 00:33:36"},
+  {username: "plainjane", password: "eyre", city: "Thornfield Hall", interests: "my own thoughts and feelings", occupation: "governess", avatar_file_name: "bronte.jpeg", avatar_content_type: "image/jpeg", avatar_file_size: 4075, avatar_updated_at: "2015-07-14 01:41:49"},
+  {username: "Bartleby", password: "melville", city: "New York", interests: " staring at the wall", occupation: "scrivener", avatar_file_name: "ink_bottle.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 5820, avatar_updated_at: "2015-07-14 02:25:33"},
+  {username: "Alice", password: "human", city: "Thornfield Hall", interests: "human resources", occupation: "Housekeeper", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil}
+])
