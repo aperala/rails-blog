@@ -75,12 +75,17 @@
 }
 
 /* posts index page style */
+.posts_all {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .posts_feed {
-  width: 25%;
+  width: 30%;
   height: 300px;
   position: relative;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 20px;
   padding: .5em .7em;
   overflow: auto;

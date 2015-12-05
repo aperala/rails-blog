@@ -56,10 +56,3 @@ div.edit_form {
   display: inline-block;
   margin-top: 20px;
 }
-
-/* button to toggle user profile edit form */
-#moo {
-  margin-bottom: 20px;
-  background-color: white;
-  border-radius: 5px;
-}

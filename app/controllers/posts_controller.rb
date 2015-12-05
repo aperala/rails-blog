@@ -23,9 +23,9 @@ class PostsController < ApplicationController
   # use if statement so that only user can post
   def create
     if current_user
-    @post = current_user.posts.create(post_params)
-    @post.save
-    redirect_to user_path(current_user)
+      @post = current_user.posts.create(post_params)
+      @post.save
+      redirect_to user_path(current_user)
     else
       redirect_to users_path
     end
