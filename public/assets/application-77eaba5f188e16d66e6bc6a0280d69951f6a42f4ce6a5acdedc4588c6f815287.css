@@ -1,0 +1,382 @@
+/*// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/ */
+
+/* post author attribution on show post path */
+
+.attribution {
+  font-size: 14px;
+}
+
+/* comment attributions on show post path */
+.comment_attribution {
+  text-align: right;
+  font-size: 12px;
+}
+
+.comment_attribution a:link, .comment_attribution a:visited {
+  color: white;
+}
+
+.comment_attribution a:hover {
+  color: #D05021;
+}
+
+.comment_body {
+  width: 60%;
+}
+
+.comments {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  line-height: 1.5em;
+  font-size: 14px;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
+}
+
+/* date and comment count on posts index path */
+.date_and_comments {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  font-size: 12px;
+  color: #FFF;
+}
+
+/* style for new post path */
+.new_post {
+  width: 60%;
+  height: 200px;
+}
+
+/* post style on post show path */
+.post {
+  width: 50%;
+  margin: 40px auto;
+  font-size: 18px;
+}
+
+.post_title {
+  width: 60%;
+  height: 20px;
+}
+
+.post_links {
+  width: 50%;
+  margin: 16px auto;
+  text-align: center;
+}
+
+.post_links > a {
+  margin-right: 18%;
+  text-align: center;
+}
+
+/* posts index page style */
+.posts_all {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.posts_feed {
+  width: 30%;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: .5em .7em;
+  overflow: auto;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
+}
+
+.posts_feed a {
+  margin-bottom: 1em;
+}
+
+.posts_feed a:link, .posts_feed a:visited {
+  color: white;
+}
+
+.posts_feed a:hover {
+  color: #D05021;
+}
+
+/* image styling for show post path */
+#post_image {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* show post path */
+#comment_form {
+  width: 300px;
+  height: 50px;
+}
+/*// Place all the styles related to the Users controller here.
+/*//*/ They will automatically be included in application/*.css.*/
+/*// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+/* form for new post on user profile page */
+
+.right textarea {
+  width: 300px;
+  height: 100px;
+  overflow: scroll;
+}
+
+/* user profile edit form */
+.edit_form > form {
+  width: 100%;
+  line-height: 2em;
+}
+
+/* style for created at on user profile pg */
+.date {
+  font-size: 12px;
+}
+
+/* container for profile edit form */
+div.edit_form {
+  width: 90%;
+  height: 500px;
+  display: none;
+  text-align: left;
+}
+
+/* user profile container */
+.left {
+  width: 25%;
+  height: 740px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px 60px 20px 50px;
+  text-align: left;
+}
+
+/* user profile */
+.profile {
+  padding: 1em;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
+}
+
+.profile_posts {
+  margin: 30px 0;
+}
+
+/* container for page content right side, user show path (profile page) */
+.right {
+  width: 50%;
+  display: inline-block;
+  margin-top: 20px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ /*reset css*/
+
+html, body, footer, h1, h3, h4, h5, h6, span, object, iframe,
+blockquote, del, dfn, em, img,small, strike, strong, 
+dl, dt, dd, ol, ul, li,form, label, legend,
+table, caption, tbody, tfoot, thead,
+article, canvas, details, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #0B81D5;
+}
+
+a:hover {
+  font-weight: bold;
+  color: #D05021;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: Snow;
+  color: #000;
+}
+
+header {
+  top: 0;
+  width: 100%;
+}
+
+h2 {
+  color: #D05021;
+}
+
+input[type="text"]{
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+}
+
+nav {
+  height: 30px;
+  padding: .7em;
+  background-color: #0B81D5;
+}
+
+/*navbar link styling*/
+nav > a:link, nav > a:visited {
+  margin-right: 2em;
+  text-decoration: none;
+  color: white;
+}
+
+nav > a:hover {
+  color: #D05021;
+}
+
+section {
+  width: 80%;
+  margin: auto;
+  overflow: auto;
+}
+
+/* form highlight color */
+textarea:focus, input:focus {
+  outline-size: 2px;
+  outline-color: #0B81D5;
+}
+
+.button {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background-color: #0B81D5;
+  color: white;
+}
+
+.input {
+  font-size: 16px;
+}
+
+/* main article space on new post & user paths */
+.main {
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  background-color: white;
+}
+
+.main form {
+  display: inline-block;
+  padding: 1em;
+  text-align: left;
+  line-height: 2.5em;
+}
+
+.page_headline {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 36px;
+  color: #D05021;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* flash notice */
+#flash {
+  width: 300px;
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+}
+
+/* front page style starts here */
+#front_pg_title {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  top: 25%;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+  color: white;
+}
+
+#front_pg_signup {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+#front_pg_wrapper a:link, #front_pg_wrapper a:visited {
+  color: #FF9900;
+}
+
+#front_pg_wrapper a:hover {
+  color: #D05021;
+}
+
+#front_pg_wrapper {
+  width: 100%;
+  height: 700px;
+  display: block;
+  background-color: white;
+  background: url(coffee.jpg);
+  background-position: left center, left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#logged_in {
+  width: 200px;
+  float: right;
+  font-size: 14px;
+  color: #FF9900;
+}
+/* end of front page style */
+
+/* sign-up page style */
+#new_user_pg {
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  background-color: #1292e8;
+  background-image: url(black-linen.png);
+}
