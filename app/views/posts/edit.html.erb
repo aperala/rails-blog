@@ -1,0 +1,25 @@
+<h1 class="page_headline">Edit Post</h1>
+
+<div class="main">
+  <%= form_for @post, url: post_path, html: { multipart: true } do |f| %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: "post_title" %>
+    </p>
+   
+    <p>
+      <%= f.label :text %><br>
+      <%= f.text_area :text, class: "new_post" %>
+    </p>
+
+    <p>
+      <%= f.label :Add_a_photo %>
+      <%= f.file_field :avatar %>
+    </p>
+   
+    <p>
+      <%= f.submit :Save, class: "button" %>
+    </p>
+  <% end %>
+  <%= link_to "Delete this post", post_path(@post), method: :delete %>
+</div>

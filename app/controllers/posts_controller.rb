@@ -39,7 +39,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    
+    @post.destroy
+    redirect_to user_path(current_user)
   end
 
  # strong params for post, including post avatar
