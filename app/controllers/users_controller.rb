@@ -19,8 +19,6 @@ class UsersController < ApplicationController
     @title = "Sign Up"
   end
 
-  # new user sign-up page, log in after successful sign up (validations in model)
-  # else give flash alert and render AR error message
   def create
     @user = User.new(user_params)
       if @user.save

@@ -13,6 +13,10 @@
   </p>
 </article>
 
+<% if current_user == @post.user %>  
+  <%= link_to "Edit post", edit_post_path(@post)  %>
+<% end %>
+
 <div class="comments">
 <h3>Leave a Comment</h3>
 <br>
