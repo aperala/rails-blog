@@ -82,12 +82,11 @@
 }
 
 .posts_feed {
-  width: 30%;
+  width: 28%;
   height: 300px;
   position: relative;
   display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin: 20px 10px;
   padding: .5em .7em;
   overflow: auto;
   background-color: #1292e8;
